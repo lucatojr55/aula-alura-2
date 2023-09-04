@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* usamos :root para criar variáveis e que possa ser aplicada globalmente no documento HTML
+:root {
+    --nome-da-variavel: cor exemplo;
+}
+Neste exemplo declaramos uma variável dentro das chaves do root, utilizando a sintaxe --nome: valor. 
+Para utilizar a variavel é so inserir var(--nome-da-variavel)*/
+:root {
+    --roxo-escuro: #1A041C;
+    --roxo-claro: #5F0469;
+    --azul-claro: #096950;
+
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--roxo-escuro);
+    color: var(--azul-claro);
+}
+
+.titulo-destaque {
+    color: var(--roxo-claro);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 5rem;
+    /*o rem, é uma medida relativa que vai usar o root-element, que é o elemento raiz, ou seja, a página HTML. É o que a pessoa que está utilizando a página definiu no navegador.*/
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    color: var(--roxo-claro);
+    font-size: 1.5rem;
+    text-decoration: none;
+
+}
+
+.apresentacao {
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.apresentacao__botao__link {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: .5rem;
+    padding: 1.3438rem 0;
+    font-size: 1.5rem;
+    color: var(--azul-claro);
+    font-family: var(--fonte-secundaria);
+    border: 2px solid var(--azul-claro);
+    /* o solid representa o tipo de borda, para mais tipos https://www.w3schools.com/css/css_border.asp*/
+
+}
+
+.apresentacao__botao__link:hover {
+    background-color: var(--roxo-claro);
+    padding: 4%;
+}
+
+/* O hover é usado para selecionar elementos quando você passa o mouse sobre eles. O único elemento que ele não estiliza são os links, que possuem seletores próprios
+para usar o hover, basta chamar em seu CSS o seletor da tag que deseja personalizar, seja seu nome ou classe, seguido por :hover*/
+
+.apresentacao__botao__texto {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.rodape {
+    color: var(--roxo-escuro);
+    background-color: var(--azul-claro);
+    padding: 1.4775rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+/*Para haaver alteração com base no tamanho,nós escrevemos @media  e abrimos e fechamos parênteses (()), diferente de antes, que usávamos chaves ,porque esses parênteses representam uma condição, nós verificamos se o que tem dentro deles é verdadeiro. Então se escrevermos um max-width: 1000px, se a tela tiver uma largura menor que isso, será aplicado o que está dentro das chaves.*/
+@media (max-width:1200px){
+    .cabecalho{
+        padding: 5% 10% 7%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5% 8%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}

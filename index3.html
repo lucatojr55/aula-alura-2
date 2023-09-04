@@ -1,0 +1,47 @@
+<!--Dica 2: Para adicionar a mesma classe em dois locais de uma vez — como no caso dos nossos dois parágrafos —, basta clicar no primeiro local, segurar o botão "Alt" e clicar nos próximos locais em que deseja escrever. Desta forma, todos os locais selecionados serão editados simultaneamente.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Aula 4</title>
+    <link rel="stylesheet" href="./styles/style2.css">
+    
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index3.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
+    <!--A tag <nav> que representa uma seção de navegação no HTML é responsável por definir um conjunto de links de navegação, ou seja, ela representa uma divisão que aponta para diferentes páginas ou áreas de navegação do próprio site-->
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo"> Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!
+            </strong></h1>
+            <p class="apresentacao__conteudo__texto"> Olá! Sou Joana Santos, desenvolvedora Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <div class="apresentacao__botao">
+                <!--a tag <div> representa uma divisão ou seção no documento HTML, sem que haja nenhuma especificidade para os elementos colocados dentro dela, ou seja, ela atua como um contêiner genérico para agrupar os elementos do HTML-->
+                <h2 class="apresentacao__botao__texto">Acesse minhas redes</h2>
+                <a class="apresentacao__botao__link" href="https://github.com/lucatojr55">
+                    <!--A tag de ancoragem<a> é usada para vincular uma página a outra utilizando o atributo href que indica o caminho de destino do link criado.-->
+                    <img src="./assets/github.png" alt="icone github">
+                    Github</a>
+                    <!--para indicar a pasta diferente da que esta o index usar ./(ponto e barra) antes-->
+                <a class="apresentacao__botao__link" href="https://www.linkedin.com/in/luiz-carlos-toni-junior-3672a5177/">
+                        <img src="./assets/linkedin.png" alt="icone linkedin">
+                        linkedin</a> 
+                <a class="apresentacao__botao__link" href="https://www.instagram.com/lucatojr55/">
+                        <img src="./assets/instagram.png" alt="icone instagram">
+                        instagram</a>    
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src="./assets/Imagem.png" alt="aluna programando"> 
+    </main>
+    <footer class="rodape">
+        <p> Devsenvolvido por alura </p>
+    </footer>
+</body>
+</html>
